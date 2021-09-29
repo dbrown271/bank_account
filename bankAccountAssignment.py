@@ -1,5 +1,4 @@
-# The BankAccount class should have a balance. When a new BankAccount instance is created, if an amount is given, the balance of the account should initially be set to that amount; otherwise, the balance should start at $0. The account should also have an interest rate, saved as a decimal (i.e. 1% would be saved as 0.01), which should be provided upon instantiation. (Hint: when using default values in parameters, the order of parameters matters!)
-
+import userAccount
 class BankAccount:
 
     def __init__(self, int_rate = 0.01, balance = 0):
@@ -10,7 +9,7 @@ class BankAccount:
         self.balance += amount
         return self
     
-    def withdraw(self, amount):
+    def withdrawl(self, amount):
         if (self.balance < amount):
             print(f"Insufficient Funds: Charging a $5")
             self.balance -= 5
@@ -35,9 +34,9 @@ bankAccount1 = BankAccount()
 bankAccount2 = BankAccount()
 #self referes to the object that performs the method during a method call
 
-bankAccount1.deposit(300).deposit(300).deposit(400).withdraw(600).yield_interest().display_account_info()
+bankAccount1.deposit(300).deposit(300).deposit(400).withdrawl(600).yield_interest().display_account_info()
 
-bankAccount2.deposit(50).deposit(50).withdraw(20).withdraw(30).withdraw(40).withdraw(50).yield_interest().display_account_info()
+bankAccount2.deposit(50).deposit(50).withdrawl(20).withdrawl(30).withdrawl(40).withdrawl(50).yield_interest().display_account_info()
 
 
 #Test Code Below
